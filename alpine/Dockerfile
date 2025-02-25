@@ -1,6 +1,6 @@
 FROM alpine:3.21
 
-RUN apk add --no-cache php83
+RUN apk add --no-cache php83 php83-dom php83-gd php83-pdo php83-session php83-simplexml php83-tokenizer php83-xml
 
 RUN adduser -D nonroot \
     && mkdir -p /etc/sudoers.d \
