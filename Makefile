@@ -7,10 +7,14 @@ build-wolfi:
 	cd wolfi && ./build.sh
 
 alpine:
+	docker run --rm php-alpine:8 whoami
+	docker run --rm php-alpine:8 cat /etc/shadow || true
 	docker run --rm php-alpine:8 php --version
 	docker run --rm php-alpine:8 php -r 'echo "Hello World\n";'
 
 wolfi:
+	docker run --rm php-alpine:8 whoami
+	docker run --rm php-alpine:8 cat /etc/shadow || true
 	docker run --rm php-wolfi:8 php --version
 	docker run --rm php-wolfi:8 php -r 'echo "Hello World\n";'
 
